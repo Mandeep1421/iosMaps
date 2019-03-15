@@ -46,6 +46,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate
             showLocationDisabledPopUp()
         }
     }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print("error :\(error)")
+    }
+    
     func showLocationDisabledPopUp()
     {
         let alertController = UIAlertController(title: "Background Location Access Disabled",
